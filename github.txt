@@ -1,0 +1,25 @@
+$ cd ~/desktop
+
+//克隆仓库到本地
+$ git clone https://github.com/Training-04/skill_test.git
+
+$ cd skill_test
+
+//查看状态
+$ git status
+
+//创建分支
+$ git checkout -b penglimei
+
+$ git status
+
+拖入文件到下载的本地库中
+
+$ git status
+
+//上传指定的文件
+$ git add .
+
+$ git commit -m "penglimei"
+
+$ git push origin penglimei
