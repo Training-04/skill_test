@@ -1,0 +1,24 @@
+
+<!--HTML5之前的版本要求form和其中的表单标签必须嵌套使用-->
+
+<!--
+<html>
+	<body>
+		<form name="myform" action="register" method="post">
+			<input type="text" name="userName" value=""/>
+			<input type="password" name="userPwd" value=""/>
+			<input type="submit" name="" value="用户注册"/>
+		</form>
+	</body>
+</html>
+
+-->
+
+<html>
+	<body>
+		<form action="" method="post" id="register"></form>
+			<input type="text" name="userName" form="register" value=""/>
+			<input type="password" name="userPwd" form="register" value=""/>
+			<button type="submit" form="register">注册</button>
+	</body>
+</html>

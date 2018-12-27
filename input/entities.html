@@ -1,0 +1,26 @@
+
+
+<!--
+	1/在HTML中不能直接使用如”<、>、&”等，在需要使用这些字符时，
+	通过字符实体来转换,一个字符实体由三个部分组成:
+	一个&符号;一个实体名或者一个实体号（即ASCII码）;一个分号（;）
+	如：小于号，需要写为 “&lt; ” 或者 “&#60; ” 
+	
+	2/通常，HTML会合并你文档中的空格。
+	如果在你的HTML文本中连续输入了10个空格，
+	其中的9个会被去掉。想要在HTML文档中插入空格，
+	可以使用实体 &nbsp;
+	-->
+	
+<html>
+	<head>
+		<title>Title of page</title>
+	</head>
+	<body>
+		<p>I like apple &amp;orange!</p>
+		<p>I like &lt;html&gt;!</p>
+		<p>&quot;I like China!&quot;</p>
+		<p>&#34;I like China!&#34</p>
+		<p>This book price &yen;5!</p>
+	</body>
+</html>
