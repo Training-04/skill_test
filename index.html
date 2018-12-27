@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-1.10.2.js"></script>
+    <script src="bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6">
+            <div class="form-horizontal">
+                <div class="bg-primary" style="background-color: #D3EEF9">个人信息注册</div>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">姓名：</label>
+                    <div class="col-sm-9">
+                        <input type="input" class="form-control" id="name" placeholder="张三">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">密码：</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">性别：</label>
+                    <div class="col-sm-9">
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" id="male" value="male" checked="true"> 男
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" id="female" value="female"> 女
+                        </label>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date" class="col-sm-2 control-label">出生日期：</label>
+                    <div class="col-sm-9">
+                        <input type="input" class="form-control" id="date" placeholder="2014/11/12">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">爱好：</label>
+                    <div class="col-sm-9">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="hobby1" class="hobby" value="电影"> 电影
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="hobby2" class="hobby" value="运动"> 运动
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="hobby3" class="hobby" value="看书"> 看书
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="hobby4" class="hobby" value="游戏"> 游戏
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="hobby5" class="hobby" value="下厨"> 下厨
+                        </label>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="education" class="col-sm-2 control-label">学历：</label>
+                    <div class="col-sm-9">
+                        <select id="education" class="form-control">
+                            <option>本科以下</option>
+                            <option>本科</option>
+                            <option>硕士</option>
+                            <option>博士</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="col-sm-2 control-label">电话：</label>
+                    <div class="col-sm-9">
+                        <input type="input" class="form-control" id="phone" placeholder="020-110">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email:</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" placeholder="123@321.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-2 control-label">家庭住址：</label>
+                    <div class="col-sm-9">
+                        <input type="input" class="form-control" id="address" placeholder="华中科技大学">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="color" class="col-sm-2 control-label">颜色</label>
+                    <div class="col-sm-9">
+                        <input type="color" class="form-control" value="#0080FF" id="color">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="number" class="col-sm-2 control-label">喜欢的数字：</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="number" placeholder="5">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="summary" class="col-sm-2 control-label">个人简介：</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="summary" rows="3" placeholder="研究生"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="register" class="btn btn-primary">注册</button>
+        </div>
+        <div class="col-md-4" id="show-div">
+            姓名：<span id="sname"></span> <br />
+            密码：<span id="spassword"></span> <br />
+            性别：<span id="ssex"></span> <br />
+            出生日期：<span id="sdate"></span> <br />
+            爱好：<span id="shobby"></span> <br />
+            学历：<span id="seducation"></span> <br />
+            电话：<span id="sphone"></span> <br />
+            Email：<span id="semail"></span> <br />
+            家庭住址：<span id="saddress"></span> <br />
+            喜欢的颜色：<span id="scolor"  style="width:100px;height: 16px;display: inline-block;"></span> <br />
+            喜欢的数字：<span id="snum"></span> <br />
+            个人简介：<span id="ssummary"></span> <br />
+        </div>
+    </div>
+    <script>
+        $("#register").click(btnClick);
+        function btnClick() {
+            var name = $("#name").val();
+            var password = $("#password").val();
+            var sex = $("#male").prop("checked") ? "男" : "女";
+            var birthday = $("#date").val();
+            var hobby = "";
+            $(".hobby").each(function (i, e) {
+                if ($(e).prop("checked")) {
+                    hobby += $(e).val() + " ";
+                }
+            });
+            var education=$("#education").val();
+            var phone=$("#phone").val();
+            var email = $("#email").val();
+            var address=$("#address").val();
+            var color=$("#color").val();
+            var num=$("#num").val();
+            var summary=$("#summary").val();
+            if (!name) {
+                alert("用户名不能为空");
+                return;
+            }
+            if (!password) {
+                alert("密码不能为空");
+                return;
+            }
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if (!reg.test(email)) {
+                alert("email格式不正确");
+                return;
+            }
+            
+            //output
+            $("#sname").text(name);
+            $("#s"+"password").text(password);
+            $("#s"+"sex").text(sex);
+            $("#s"+"date").text(birthday);
+            $("#s"+"hobby").text(hobby);
+            $("#s"+"education").text(education);
+            $("#s"+"phone").text(phone);
+            $("#s"+"email").text(email);
+            $("#s"+"address").text(address);
+            $("#s"+"color").css("background-color",color);
+            $("#s"+"num").text(num);
+            $("#s"+"summary").text(summary);
+
+
+        }
+    </script>
+</body>
+
+</html>
