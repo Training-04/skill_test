@@ -1,0 +1,2 @@
+select  '员工' +first_name + ' 的邮件地址为: ' + email
+from employees

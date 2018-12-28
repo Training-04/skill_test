@@ -1,0 +1,4 @@
+select * 
+from employees
+ where department_id  not in
+ (10,20,110);
